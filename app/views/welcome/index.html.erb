@@ -1,0 +1,35 @@
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Kaleo_Rails_Engineer_Candidate_Interview_Project_0"></a>Kaleo Rails Engineer Candidate Interview Project</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">Thanks for taking the time to complete this exercise. We’re excited that you’re considering joining our amazing team.</p>
+<p class="has-line-data" data-line-start="4" data-line-end="5">This Rails application is a basic skeleton of an app that serves an API about questions and answers. It already includes 4 basic models:</p>
+<ol>
+  <li class="has-line-data" data-line-start="6" data-line-end="7">Question</li>
+  <li class="has-line-data" data-line-start="7" data-line-end="8">Answer</li>
+  <li class="has-line-data" data-line-start="8" data-line-end="9">User</li>
+  <li class="has-line-data" data-line-start="9" data-line-end="11">Tenant</li>
+</ol>
+<p class="has-line-data" data-line-start="11" data-line-end="12">A Question can have one or more answers, and can be private. Every Answer belongs to one question. Each Question has an asker (User), and each Answer has a provider (User).</p>
+<p class="has-line-data" data-line-start="13" data-line-end="14">A Tenant is a consumer of the API you are going to write. A db/seeds.rb file is included to preload the database with test data when you setup the DB.</p>
+<h2 class="code-line" data-line-start=15 data-line-end=16 ><a id="You_need_to_accomplish_the_following_tasks_15"></a>You need to accomplish the following tasks:</h2>
+<ul>
+  <li class="has-line-data" data-line-start="17" data-line-end="18">Add a RESTful, read-only API to allow consumers to retrieve Questions with Answers as JSON (no need to retrieve Answers on their own). The response should include Answers inside their Question as well as include the id and name of the Question and Answer users.</li>
+  <li class="has-line-data" data-line-start="18" data-line-end="19">Don’t return private Questions in the API response.</li>
+  <li class="has-line-data" data-line-start="19" data-line-end="20">Require every API request to include a valid Tenant API key, and return an HTTP code of your choice if the request does not include a valid key.</li>
+  <li class="has-line-data" data-line-start="20" data-line-end="21">Track API request counts per Tenant.</li>
+  <li class="has-line-data" data-line-start="21" data-line-end="22">Add an HTML dashboard page as the root URL that shows the total number of Users, Questions, and Answers in the system, as well as Tenant API request counts for all Tenants.  Style it enough to not assault a viewer’s sensibilities.</li>
+  <li class="has-line-data" data-line-start="22" data-line-end="23">Add tests around the code you write as you deem appropriate. Assume that the API cannot be changed once it’s released and test accordingly.</li>
+  <li class="has-line-data" data-line-start="23" data-line-end="25">You are welcome to add any models or other code you think you need, as well as any gems.</li>
+</ul>
+<h2 class="code-line" data-line-start=25 data-line-end=26 ><a id="Extra_credit_features_you_might_consider_25"></a>Extra credit features you might consider:</h2>
+<ul>
+  <li class="has-line-data" data-line-start="27" data-line-end="28">Allow adding a query parameter to the API request to select only Questions that contain the query term(s).  Return an appropriate HTML status code if no results are found.</li>
+  <li class="has-line-data" data-line-start="28" data-line-end="30">Add a piece of middleware to throttle API requests on a per-Tenant basis. After the first 100 requests per day, throttle to 1 request per 10 seconds.</li>
+</ul>
+<h2 class="code-line" data-line-start=30 data-line-end=31 ><a id="Project_Setup_30"></a>Project Setup</h2>
+<p class="has-line-data" data-line-start="32" data-line-end="33">Clone this repo locally, and from the top-level directory run:</p>
+<p class="has-line-data" data-line-start="34" data-line-end="35"><code>bundle install</code></p>
+<p class="has-line-data" data-line-start="36" data-line-end="37"><code>bundle exec rake db:setup</code></p>
+<p class="has-line-data" data-line-start="38" data-line-end="39">To make sure it’s all working,</p>
+<p class="has-line-data" data-line-start="40" data-line-end="41"><code>rails s</code></p>
+<p class="has-line-data" data-line-start="42" data-line-end="43">You should see this same information.</p>
+<h2 class="code-line" data-line-start=44 data-line-end=45 ><a id="Submitting_your_project_44"></a>Submitting your project</h2>
+<p class="has-line-data" data-line-start="46" data-line-end="47">Send us a zip file of the whole project for us to evaluate it.  If you need to add any additional instructions to the README please put them at the very top of that file and mention.  Expect to discuss your design decisions during the interview.</p>
