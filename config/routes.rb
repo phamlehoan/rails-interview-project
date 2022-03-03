@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'tracking_requests', to: 'tenants#index'
   get 'welcome/index'
   root 'welcome#index'
 

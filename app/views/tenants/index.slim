@@ -1,0 +1,13 @@
+.container
+  h2
+    | Track API request counts per Tenant.
+  ul.responsive-table
+    li.table-header
+      .col.col-1 Tenant Id
+      .col.col-2 Tenant Name
+      .col.col-3 Number of requests
+    - @tenants.each do |tenant|
+      li.table-row
+        .col.col-1= tenant.id
+        .col.col-2= tenant.name
+        .col.col-3= tenant.number_of_requests

@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
       api_key = request.headers["X-Api-Key"]
       tenant = Tenant.find_by(api_key: api_key)
       if tenant
+        tenant.update_column(:number_of_requests, tenant.number_of_requests + 1)
         @tenant = tenant
       else
         render json: {status: 'ERROR', message: 'Invalid API key'}, status: :unauthorized
