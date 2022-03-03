@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby '2.7.1'
+gem 'active_model_serializers'
 gem 'rails', '6.0.3.2'
 # Use mysql2 as the database for Active Record
 gem 'mysql2', '>= 0.4.4'
