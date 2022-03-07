@@ -6,6 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Tenant.delete_all
+Answer.delete_all
+Question.delete_all
+User.delete_all
+
 require 'ffaker'
 
 # Tenants
